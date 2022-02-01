@@ -1,1 +1,1 @@
-# lib_walletconnect_swift
+# WalletConnect

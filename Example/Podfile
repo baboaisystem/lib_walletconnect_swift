@@ -1,0 +1,19 @@
+platform :ios, '13.0'
+inhibit_all_warnings!
+use_frameworks!
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+install! 'cocoapods', :generate_multiple_pod_projects => true
+
+target 'WalletConnect_Example' do
+  pod 'WalletConnect', :path => '../'
+  pod 'TrustWalletCore'
+  pod 'SwiftLint'
+  pod 'HsToolKit.swift', git: 'https://github.com/baboaisystem/lib_hstool_swift.git'
+  
+  target 'WalletConnect_Tests' do
+    inherit! :search_paths
+  end
+end
+
